@@ -1,140 +1,137 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Peak Team Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PEAK — Біздің топ</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #001f3f, #004080);
+      background: linear-gradient(180deg, #0b1f4a, #1a73e8);
       color: white;
+      margin: 0;
       text-align: center;
     }
 
     header {
-      background-color: rgba(0, 64, 128, 0.9);
-      padding: 30px 10px;
-      border-bottom: 3px solid #00bfff;
+      padding: 50px 20px;
+      background: rgba(0, 0, 60, 0.6);
+      backdrop-filter: blur(6px);
     }
 
     header img {
       width: 160px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 2.5em;
-      margin-top: 10px;
-      color: #00bfff;
+      font-size: 2.8em;
+      margin-bottom: 10px;
       letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    section {
-      padding: 40px 20px;
-      margin: 20px auto;
-      max-width: 900px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
     }
 
     h2 {
       font-size: 2em;
-      color: #00bfff;
-      margin-bottom: 20px;
+      margin-top: 40px;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
-    .members {
+    .bio-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
+      padding: 30px;
     }
 
-    .member {
-      background: rgba(255, 255, 255, 0.15);
+    .card {
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
-      padding: 20px;
-      width: 260px;
-      box-shadow: 0 0 15px rgba(0, 191, 255, 0.3);
-      transition: transform 0.3s;
+      padding: 25px;
+      width: 280px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
     }
 
-    .member:hover {
-      transform: scale(1.05);
+    .card:hover {
+      transform: translateY(-5px);
     }
 
-    .member h3 {
-      color: #00bfff;
+    .card h3 {
+      color: #fff;
+      font-size: 1.4em;
       margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #dfe6f1;
+      font-size: 1em;
+      line-height: 1.4em;
     }
 
     iframe {
       border-radius: 20px;
-      width: 100%;
-      max-width: 700px;
-      height: 400px;
-      border: none;
-      box-shadow: 0 0 15px rgba(0, 191, 255, 0.4);
+      margin-top: 20px;
+      width: 90%;
+      max-width: 600px;
+      height: 340px;
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 50px;
       padding: 20px;
-      background-color: rgba(0, 64, 128, 0.8);
-      font-size: 1em;
-      border-top: 3px solid #00bfff;
-    }
-
-    @media (max-width: 768px) {
-      h1 { font-size: 2em; }
-      h2 { font-size: 1.6em; }
-      .member { width: 90%; }
-      iframe { height: 250px; }
+      background: rgba(0, 0, 0, 0.4);
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="peak.jpg" alt="Peak Logo">
-    <h1>Peak Team Portfolio</h1>
+    <img src="peak.jpg" alt="PEAK Logo">
+    <h1>Біздің топ — PEAK</h1>
+    <p>Шығармашылық, интеллект және бірлік!</p>
   </header>
 
   <section>
-    <h2>Топ мүшелері</h2>
-    <div class="members">
-      <div class="member">
+    <h2>Біз туралы</h2>
+    <div class="bio-section">
+
+      <div class="card">
         <h3>Камал Нурмат</h3>
-        <p>Біздің топтың жетекшісі және басты әзірлеушісі. Презентацияларды жасайды және сайттың құрылымын басқарады. Шығармашылық және идея генераторы 💡</p>
+        <p>Біздің топтың жетекшісі және басты әзірлеуші. Презентацияларды дайындайды және сайттың құрылымын жасайды. Барлығын үйлестіреді.</p>
       </div>
-      <div class="member">
+
+      <div class="card">
         <h3>Сайлаубеков Ануар</h3>
-        <p>Жасанды интеллект саласында жақсы түсінеді 🤖. Топтың бейнелерін ІІ арқылы жасауға көмектеседі және жаңа технологияларды зерттейді.</p>
+        <p>Жасанды интеллект саласында тәжірибелі. Видеоларды ІІ арқылы жасайды және технологияларды зерттейді.</p>
       </div>
-      <div class="member">
+
+      <div class="card">
         <h3>Макажан Асылкеней</h3>
-        <p>Бейнелерге дауыс жазып, монтаж жасайды 🎬. Топтық бейнелерге креативті өңдеу мен ұлттық нақыш қосады.</p>
+        <p>Топтың видеомонтажшысы. Өз дауыстарымызбен видеоларды өңдейді және мазмұнды әдемі етіп жасайды.</p>
       </div>
-      <div class="member">
+
+      <div class="card">
         <h3>Те Валерий</h3>
-        <p>Бейнелерді ІІ көмегімен жасайды және монтажерге көмек көрсетеді. Видео сапасы мен көркемдігін арттырады 📹.</p>
+        <p>Ануарға ІІ видеолар жасауға көмектеседі және монтаж процесіне қатысады. Шығармашылық пен технологияны біріктіреді.</p>
       </div>
-      <div class="member">
+
+      <div class="card">
         <h3>Рауф Радбек</h3>
-        <p>Презентациялармен айналысады және дизайн жағын үйлестіреді. Топтың визуалды бағытын қалыптастырады 🎨.</p>
+        <p>Презентацияларды безендіріп, жобаның визуалдық бөлігін жасайды. Топтың идеяларын әдемі түрде көрсетеді.</p>
       </div>
     </div>
   </section>
 
   <section>
     <h2>Ұлттық бейне</h2>
-    <iframe src="https://www.youtube.com/embed/KCmlOVdhVLc?si=Fb7Jei55lO2X4A6q" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/KCmlOVdhVLc?si=Fb7Jei55lO2X4A6q" title="Ұлттық бейне" allowfullscreen></iframe>
   </section>
 
   <footer>
-    <p>© 2025 Peak Team | Барлық құқықтар қорғалған</p>
+    <p>© 2025 PEAK Group | Жобаны орындады: Камал Нурмат және команда</p>
   </footer>
 </body>
 </html>
