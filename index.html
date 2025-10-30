@@ -153,50 +153,48 @@
   </section>
 
   <script>
-    const form = document.getElementById('uploadForm');
-    const list = document.getElementById('uploadedWorks');
-    const API_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLiISiCFnsD-RfCjWkxTykz0ZoeVZMbE-4EuBkZ7R7W4AXjgepZ5IY3Z_oaj15QpPYry6FRuxfnOEat2pB_TbAxU8Y096DDlpyaNrxq2WhC1i0BvlMTOkl5IYf1jEE6Dd_p98K4c92wxPx1LYmYRYeJlmgSuLN5F43ASzp8kL3_5Kub8bT6ByWNu0KlUVgQAHw6e3Pg_Jcdsp3qmucmk3ZshIJ-G_UzNKWx9vUtMyUpNaTOOoIkCboXPcGs4mH15wvxdWfUoVmFjLPUPCKFOrpwTMB5Q-g&lib=MQhPplj-v6FMDY-pi2DcNR8ggnXhFUlq3";
+  const API_URL = "https://script.google.com/macros/s/AKfycbyBQ1jftpllpedrTVEJgNsUTTcez5ULUOkSt4xs3gvOvUkXeGAg3WK25W09Qed5skn9/exec";
 
-    async function loadWorks() {
-      try {
-        const res = await fetch(API_URL);
-        const data = await res.json();
-        list.innerHTML = "";
-        data.forEach(addWork);
-      } catch (e) {
-        list.innerHTML = "<p>⚠️ Жүктеу кезінде қате пайда болды.</p>";
-      }
-    }
+  const form = document.getElementById('uploadForm');
+  const list = document.getElementById('uploadedWorks');
 
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const work = {
-        name: document.getElementById('name').value,
-        title: document.getElementById('title').value,
-        desc: document.getElementById('desc').value,
-        link: document.getElementById('link').value
-      };
-      await fetch(API_URL, {
-        method: "POST",
-        body: JSON.stringify(work)
-      });
-      addWork(work);
-      form.reset();
+  async function loadWorks() {
+    list.innerHTML = "<em>Жүктелуде...</em>";
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    list.innerHTML = "";
+    data.reverse().forEach(item => {
+      const div = document.createElement('div');
+      div.classList.add('uploaded-item');
+      div.innerHTML = `
+        <strong>${item.title}</strong> — ${item.name}<br>
+        ${item.desc ? `<em>${item.desc}</em><br>` : ""}
+        ${item.link ? `<a href="${item.link}" target="_blank">🔗 Қарау</a>` : ""}
+      `;
+      list.appendChild(div);
+    });
+  }
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const title = document.getElementById('title').value;
+    const link = document.getElementById('link').value;
+    const desc = document.getElementById('desc').value;
+
+    await fetch(API_URL, {
+      method: "POST",
+      body: new URLSearchParams({ name, title, link, desc }),
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
     });
 
-    function addWork({name, title, desc, link}) {
-      const item = document.createElement('div');
-      item.classList.add('uploaded-item');
-      item.innerHTML = `
-        <strong>${title}</strong> — ${name}<br>
-        ${desc ? `<em>${desc}</em><br>` : ""}
-        ${link ? `<a href="${link}" target="_blank">🔗 Қарау</a>` : ""}
-      `;
-      list.appendChild(item);
-    }
-
+    form.reset();
     loadWorks();
-  </script>
+  });
+
+  loadWorks();
+</script>
+
 </body>
 </html>
 
