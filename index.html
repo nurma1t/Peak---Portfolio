@@ -86,11 +86,36 @@
       background-color: #007acc;
     }
 
-    video {
-      width: 90%;
-      margin-top: 20px;
-      border-radius: 15px;
+    .instagram {
+      margin: 50px auto;
+      padding: 30px;
+      width: 85%;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.1);
       box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    }
+
+    .instagram a {
+      display: inline-block;
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+      color: white;
+      padding: 15px 40px;
+      font-size: 1.3em;
+      font-weight: bold;
+      border-radius: 40px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .instagram a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #fa7e1e;
+    }
+
+    .instagram img {
+      width: 90px;
+      border-radius: 20px;
+      margin-bottom: 15px;
     }
 
     footer {
@@ -139,13 +164,12 @@
     <div id="fileList"></div>
   </section>
 
-  <section>
-    <h2>🎵 Ұлттық бейне мен әуен</h2>
-    <video controls>
-      <source src="national_video.mp4" type="video/mp4">
-      Сіздің браузеріңіз бейнені қолдамайды.
-    </video>
-  </section>
+  <section class="instagram">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+  <h2>📸 Бізді Instagram-да қадағалаңыз!</h2>
+  <p>@peak.2502</p>
+  <a href="https://www.instagram.com/peak.2502" target="_blank">Инстаграмға өту</a>
+</section>
 
   <footer>
     <p>© 2025 PEAK Team | Барлығы өз қолымызбен жасалды 💙</p>
