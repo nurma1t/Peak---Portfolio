@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peak Тобының Портфолиосы</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #d0f0c0, #f0fff4);
+      color: #222;
+      text-align: center;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2e8b57, #6fdc8c);
+      color: white;
+      padding: 50px 20px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+      gap: 15px;
+      border-radius: 0 0 25px 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2e8b57;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #1e5e3a;
+      text-shadow: 0 0 5px #aaffaa;
+    }
+
+    section {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 30px auto;
+      background: #ffffffb3;
+      border-radius: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      color: #1e5e3a;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      margin: 20px 0;
+      padding: 15px;
+      border-radius: 20px;
+    }
+
+    .works img {
+      width: 100%;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .member {
+      background: #e9fce3;
+      border-radius: 20px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .member h3 {
+      margin: 10px 0 5px;
+      color: #2e8b57;
+    }
+
+    .upload-form input, .upload-form textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+
+    .upload-form button {
+      background: #2e8b57;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .upload-form button:hover {
+      background: #226943;
+    }
+
+    .uploaded-item {
+      background: #e8f7e5;
+      margin: 10px auto;
+      padding: 10px;
+      width: 90%;
+      border-radius: 10px;
+    }
+
+    iframe {
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: #2e8b57;
+      color: white;
+      padding: 20px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 32px; }
+      section h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🌿 Peak тобының портфолиосы 🌿</h1>
+  <p>Біздің ұлттық рухтағы жобалар мен бейнелер</p>
+</header>
+
+<nav>
+  <a href="#about">Біз туралы</a>
+  <a href="#team">Қатысушылар</a>
+  <a href="#works">Жұмыстар</a>
+  <a href="#upload">Жүктеу</a>
+  <a href="#video">Бейне</a>
+</nav>
+
+<section id="about" class="card">
+  <h2>Біз туралы</h2>
+  <p>Біз — <b>Peak</b> тобы.  
+  Қазақ тілін үйреніп, ұлттық мәдениетті заманауи форматта танытуды мақсат етеміз.  
+  Бұл сайтта біздің презентациялар, бейнелер және жобалар жиналған.</p>
+</section>
+
+<section id="team" class="card">
+  <h2>Біздің қатысушылар</h2>
+  <div class="team">
+    <div class="member"><h3>Камал Нурмат</h3><p>Жоба жетекшісі</p></div>
+    <div class="member"><h3>Сайлаубеков Ануар</h3><p>Презентация дизайнері</p></div>
+    <div class="member"><h3>Макажан Асылкеней</h3><p>Идея авторы</p></div>
+    <div class="member"><h3>Те Валерий</h3><p>Бейне монтажшы</p></div>
+    <div class="member"><h3>Рауф Радбек</h3><p>Контент жасаушы</p></div>
+  </div>
+</section>
+
+<section id="works" class="card works">
+  <h2>Біздің жұмыстар</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Kazakh_yurt_in_steppe.jpg" alt="Ұлттық жоба">
+  <p><a href="https://docs.google.com/presentation/" target="_blank">📎 Презентацияны қарау</a></p>
+</section>
+
+<section id="upload" class="card">
+  <h2>Жұмысыңды жүкте</h2>
+  <form class="upload-form" id="uploadForm">
+    <input type="text" id="name" placeholder="Атыңды енгіз" required>
+    <input type="text" id="title" placeholder="Жұмыстың атауы" required>
+    <input type="url" id="link" placeholder="Сілтеме (мысалы: YouTube, Drive)">
+    <textarea id="desc" placeholder="Қысқаша сипаттама" rows="3"></textarea>
+    <button type="submit">✅ Жүктеу</button>
+  </form>
+  <div id="uploadedWorks"></div>
+</section>
+
+<section id="video" class="card">
+  <h2>Ұлттық бейне</h2>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/fRbqN9u3MxI"
+          title="Қазақ ұлттық әні" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<footer>
+  <p>© 2025 Peak тобы | Бірлік пен шабыт 💚</p>
+</footer>
+
+<script>
+  const form = document.getElementById('uploadForm');
+  const list = document.getElementById('uploadedWorks');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const title = document.getElementById('title').value;
+    const link = document.getElementById('link').value;
+    const desc = document.getElementById('desc').value;
+
+    const item = document.createElement('div');
+    item.classList.add('uploaded-item');
+    item.innerHTML = `
+      <strong>${title}</strong> — ${name}<br>
+      ${desc ? `<em>${desc}</em><br>` : ""}
+      ${link ? `<a href="${link}" target="_blank">🔗 Қарау</a>` : ""}
+    `;
+
+    list.appendChild(item);
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
