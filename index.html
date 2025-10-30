@@ -1,289 +1,129 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peak Тобының Портфолиосы</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEAK Тобының Портфолиосы</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom right, #d8ecff, #f4f9ff);
-      color: #1b1b1b;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0052D4, #4364F7, #6FB1FC);
+      color: white;
       text-align: center;
     }
-
     header {
-      background: linear-gradient(135deg, #0077ff, #66aaff);
-      color: white;
-      padding: 50px 20px;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      padding: 40px 20px;
     }
-
     header img {
-      width: 140px;
-      height: auto;
-      margin-bottom: 15px;
+      width: 180px;
+      border-radius: 20px;
     }
-
     header h1 {
-      font-size: 42px;
-      margin: 0;
-      letter-spacing: 1px;
+      font-size: 3em;
+      margin-top: 20px;
+      letter-spacing: 2px;
     }
-
-    header p {
-      font-size: 20px;
-      margin-top: 10px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      background: white;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 15px;
-      gap: 15px;
-      border-radius: 0 0 25px 25px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #0056b3;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #003f7d;
-      text-shadow: 0 0 5px #cce5ff;
-    }
-
     section {
-      padding: 30px 20px;
+      padding: 60px 20px;
+      margin: 20px auto;
       max-width: 900px;
-      margin: 30px auto;
-      background: #ffffffb3;
-      border-radius: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-
-    section h2 {
-      color: #004a99;
-      font-size: 28px;
-      margin-bottom: 15px;
-    }
-
-    .card {
-      margin: 20px 0;
-      padding: 15px;
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     }
-
-    .works img {
-      width: 100%;
-      border-radius: 20px;
-      margin-top: 10px;
+    h2 {
+      font-size: 2em;
+      color: #fff;
+      margin-bottom: 20px;
+      text-transform: uppercase;
     }
-
-    .team {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+    p {
+      font-size: 1.2em;
+      line-height: 1.7em;
     }
-
-    .member {
-      background: #e8f2ff;
-      border-radius: 20px;
-      padding: 20px;
-      width: 230px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: 0.3s;
-    }
-
-    .member:hover {
-      transform: scale(1.05);
-      background: #d6eaff;
-    }
-
-    .member h3 {
-      margin: 10px 0 5px;
-      color: #0056b3;
-    }
-
-    .member p {
-      font-size: 15px;
-      line-height: 1.5;
-    }
-
-    .upload-form input, .upload-form textarea {
-      width: 90%;
-      padding: 10px;
-      margin: 8px 0;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      font-size: 16px;
-    }
-
-    .upload-form button {
-      background: #0077ff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 12px;
-      cursor: pointer;
-      font-size: 18px;
-    }
-
-    .upload-form button:hover {
-      background: #005bcc;
-    }
-
-    .uploaded-item {
-      background: #e7f0ff;
-      margin: 10px auto;
-      padding: 10px;
-      width: 90%;
-      border-radius: 10px;
-    }
-
     iframe {
       border-radius: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
+      border: none;
     }
-
-    footer {
-      background: #0056b3;
-      color: white;
-      padding: 20px;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
+    .bio-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
       margin-top: 30px;
     }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 32px; }
-      section h2 { font-size: 24px; }
+    .member {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .member:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .member h3 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+    .member p {
+      font-size: 1em;
+      color: #e6e6e6;
+    }
+    footer {
+      padding: 30px;
+      font-size: 1em;
+      background: rgba(255, 255, 255, 0.1);
+      border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
   </style>
 </head>
 <body>
 
-<header>
-  <img src="peak.jpg" alt="Peak логотип">
-  <h1>🌄 Peak тобының портфолиосы 🌄</h1>
-  <p>Жаңашылдық пен ұлттық рух бірлікте</p>
-</header>
+  <header>
+    <img src="peak.jpg" alt="Peak Logo">
+    <h1>PEAK Тобы</h1>
+    <p>Біздің шығармашылық топ — ұлттық рух пен жаңа технологияны біріктіреді</p>
+  </header>
 
-<nav>
-  <a href="#about">Біз туралы</a>
-  <a href="#team">Қатысушылар</a>
-  <a href="#works">Жұмыстар</a>
-  <a href="#upload">Жүктеу</a>
-  <a href="#video">Бейне</a>
-</nav>
+  <section id="ulttyk-beine">
+    <h2>Ұлттық бейне</h2>
+    <iframe src="https://www.youtube.com/embed/KCmlOVdhVLc?si=Fb7Jei55lO2X4A6q" allowfullscreen></iframe>
+    <p>Бұл бейне — қазақтың ұлттық мәдениеті мен тыныштығын бейнелейтін әсерлі туынды.</p>
+  </section>
 
-<section id="about" class="card">
-  <h2>Біз туралы</h2>
-  <p>Біз — <b>Peak</b> тобы, қазақ тілі мен мәдениетін технология арқылы танытуды мақсат еткен жас шығармашылдармыз.  
-  Әр қатысушы — ерекше бағытта дамып келе жатқан талант. Біздің ұраны:  
-  <b>«Жаңашылдық пен дәстүр – бір биікте!»</b></p>
-</section>
-
-<section id="team" class="card">
-  <h2>Қатысушылар туралы</h2>
-  <div class="team">
-    <div class="member">
-      <h3>Камал Нурмат</h3>
-      <p>Негізгі жетекші және сайттың басты әзірлеушісі.  
-      Креативті ойлаумен ерекшеленеді, топтың презентацияларын және дизайн шешімдерін жасайды.  
-      Жаңа идеялардың авторы 💡</p>
+  <section id="members">
+    <h2>Біздің топ мүшелері</h2>
+    <div class="bio-container">
+      <div class="member">
+        <h3>Камал Нурмат</h3>
+        <p>Топтың басты жетекшісі және негізгі веб-әзірлеушісі. Презентацияларды жасап, сайттың құрылымын ойлап табады.</p>
+      </div>
+      <div class="member">
+        <h3>Сайлаубеков Ануар</h3>
+        <p>Жасанды интеллект бойынша маман. AI құралдарымен бейнелерді жасайды және жобада инновациялық идеяларды енгізеді.</p>
+      </div>
+      <div class="member">
+        <h3>Макажан Асылкеней</h3>
+        <p>Видео-монтаж және дыбыс жазу маманы. Топтың озвучкасын және соңғы видеоны сапалы өңдейді.</p>
+      </div>
+      <div class="member">
+        <h3>Те Валерий</h3>
+        <p>AI бейнелер жасауда көмек көрсетеді және монтаж процесінде қолдау көрсетеді. Шығармашылық көзқарасы бар маман.</p>
+      </div>
+      <div class="member">
+        <h3>Рауф Радбек</h3>
+        <p>Презентация және контент дизайнері. Топтың визуалды жағына жауап береді және материалдарды ұсынады.</p>
+      </div>
     </div>
-    <div class="member">
-      <h3>Сайлаубеков Ануар</h3>
-      <p>Жасанды интеллектке қызығушылық танытқан талант.  
-      Видео генерация және AI құралдарымен жұмыс істейді.  
-      Бейнематериалдарды талдайды және өңдеуді автоматтандырады 🤖</p>
-    </div>
-    <div class="member">
-      <h3>Макажан Асылкеней</h3>
-      <p>Топтың дауысы мен шығармашылық режиссері.  
-      Біздің бейнелердің монтажын және озвучкасын жасайды.  
-      Әр көрініске эмоция мен ұлттық үн қосады 🎙️</p>
-    </div>
-    <div class="member">
-      <h3>Те Валерий</h3>
-      <p>Видео өңдеуде тәжірибелі және Ануарға көмекші монтажшы.  
-      AI технологияларын бейнелерге енгізуде қолдау көрсетеді.  
-      Жауапты әрі техникалық ойлы маман 🎬</p>
-    </div>
-    <div class="member">
-      <h3>Рауф Радбек</h3>
-      <p>Презентациялар мен слайдтардың дизайнері.  
-      Материалдарды көркем және логикалық түрде ұсынуда шебер.  
-      Топ жұмысының үйлесімділігін қадағалайды 💻</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="works" class="card works">
-  <h2>Біздің жұмыстар</h2>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Kazakh_yurt_in_steppe.jpg" alt="Ұлттық жоба">
-  <p><a href="https://docs.google.com/presentation/" target="_blank">📎 Презентацияны қарау</a></p>
-</section>
-
-<section id="upload" class="card">
-  <h2>Жұмысыңды жүкте</h2>
-  <form class="upload-form" id="uploadForm">
-    <input type="text" id="name" placeholder="Атыңды енгіз" required>
-    <input type="text" id="title" placeholder="Жұмыстың атауы" required>
-    <input type="url" id="link" placeholder="Сілтеме (мысалы: YouTube, Drive)">
-    <textarea id="desc" placeholder="Қысқаша сипаттама" rows="3"></textarea>
-    <button type="submit">✅ Жүктеу</button>
-  </form>
-  <div id="uploadedWorks"></div>
-</section>
-
-<section id="video" class="card">
-  <h2>Ұлттық бейне</h2>
-  <iframe width="100%" height="315" src="https://www.youtube.com/embed/fRbqN9u3MxI"
-          title="Қазақ ұлттық әні" frameborder="0" allowfullscreen></iframe>
-</section>
-
-<footer>
-  <p>© 2025 Peak тобы | Технология мен рух бір арнада 💙</p>
-</footer>
-
-<script>
-  const form = document.getElementById('uploadForm');
-  const list = document.getElementById('uploadedWorks');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const name = document.getElementById('name').value;
-    const title = document.getElementById('title').value;
-    const link = document.getElementById('link').value;
-    const desc = document.getElementById('desc').value;
-
-    const item = document.createElement('div');
-    item.classList.add('uploaded-item');
-    item.innerHTML = `
-      <strong>${title}</strong> — ${name}<br>
-      ${desc ? `<em>${desc}</em><br>` : ""}
-      ${link ? `<a href="${link}" target="_blank">🔗 Қарау</a>` : ""}
-    `;
-
-    list.appendChild(item);
-    form.reset();
-  });
-</script>
+  <footer>
+    <p>© 2025 PEAK командасы | Барлық құқықтар қорғалған</p>
+  </footer>
 
 </body>
 </html>
