@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="kk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peak Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEAK Portfolio</title>
   <style>
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #001f3f, #0074D9);
+      background: linear-gradient(135deg, #0d47a1, #1976d2);
       color: white;
+      text-align: center;
       margin: 0;
       padding: 0;
-      text-align: center;
     }
     header {
-      background: rgba(0,0,0,0.3);
-      padding: 20px;
-      border-bottom: 3px solid #00aaff;
+      padding: 40px 20px;
+      background-color: rgba(0,0,0,0.3);
     }
     header img {
-      width: 100px;
+      width: 120px;
       border-radius: 50%;
     }
     h1 {
@@ -28,173 +27,161 @@
       letter-spacing: 2px;
     }
     .bio {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      margin: 40px 0;
+      padding: 30px;
     }
-    .card {
-      background: rgba(255,255,255,0.1);
-      border: 2px solid #00aaff;
-      border-radius: 15px;
+    .member {
+      background-color: rgba(255,255,255,0.1);
       padding: 20px;
-      width: 260px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.4);
-      transition: transform 0.3s ease, background 0.3s ease;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
     }
-    .card:hover {
+    .member:hover {
       transform: scale(1.05);
-      background: rgba(0,170,255,0.2);
+      background-color: rgba(255,255,255,0.15);
     }
-    .card h3 {
-      color: #00ccff;
+    h2 {
+      color: #bbdefb;
     }
-    section.instagram {
-      background: rgba(255,255,255,0.05);
-      padding: 40px 20px;
-    }
-    section.instagram img {
-      width: 80px;
-      margin-bottom: 15px;
-    }
-    section.instagram a {
-      background: #00aaff;
-      padding: 10px 20px;
-      color: white;
-      border-radius: 10px;
+    a {
+      color: #90caf9;
       text-decoration: none;
       font-weight: bold;
     }
-    section.upload {
-      padding: 40px 20px;
-      background: rgba(255,255,255,0.08);
+    form {
+      background: rgba(0,0,0,0.3);
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 500px;
     }
     input, textarea {
       width: 90%;
-      max-width: 400px;
+      margin: 10px 0;
       padding: 10px;
-      margin: 5px;
-      border-radius: 10px;
       border: none;
-      font-size: 1em;
+      border-radius: 10px;
     }
     button {
-      background: #00aaff;
+      background: #2196f3;
       color: white;
+      padding: 10px 20px;
       border: none;
-      padding: 12px 20px;
       border-radius: 10px;
       font-size: 1em;
       cursor: pointer;
+      transition: 0.3s;
     }
     button:hover {
-      background: #0088cc;
+      background: #1565c0;
     }
     .uploaded-item {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid #00aaff;
+      background-color: rgba(255,255,255,0.15);
       margin: 10px auto;
-      padding: 10px;
+      padding: 15px;
       border-radius: 10px;
       width: 90%;
-      max-width: 500px;
+      max-width: 600px;
+    }
+    footer {
+      background: rgba(0,0,0,0.4);
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="peak.jpg" alt="Peak Logo">
-    <h1>🌟 Peak Portfolio</h1>
-    <p>Ұлттық рух. Заманауи көзқарас.</p>
+    <img src="peak.jpg" alt="PEAK Logo">
+    <h1>PEAK Portfolio</h1>
+    <p><a href="https://www.instagram.com/peak.2502?igsh=NjNyYmVsamppaXJu" target="_blank">Бізді Instagram-да бақылаңыз 📸</a></p>
   </header>
 
   <section class="bio">
-    <div class="card">
-      <h3>Камал Нурмат</h3>
-      <p>Негізгі әзірлеуші және презентациялар авторы. Сайт пен дизайн идеясын ұсынған.</p>
+    <div class="member">
+      <h2>Камал Нурмат</h2>
+      <p>Басты презентация жасаушы және сайттың негізгі әзірлеушісі. Креативті идеялардың авторы.</p>
     </div>
-    <div class="card">
-      <h3>Сайлаубеков Ануар</h3>
-      <p>Жасанды интеллектпен жұмыс істеу шебері. Видеоларға ИИ қолданады.</p>
+    <div class="member">
+      <h2>Сайлаубеков Ануар</h2>
+      <p>Жасанды интеллект саласын меңгерген, AI бейнелерін жасайды және командаға техқолдау көрсетеді.</p>
     </div>
-    <div class="card">
-      <h3>Макажан Асылкеней</h3>
-      <p>Видео монтаж және дыбыстық сүйемелдеуді жасайды. Команданың дауысы мен стилі.</p>
+    <div class="member">
+      <h2>Макажан Асылкеней</h2>
+      <p>Бейнелердің монтажшысы және дыбыстаушы. Команда бейнелерін кәсіби деңгейде жасайды.</p>
     </div>
-    <div class="card">
-      <h3>Те Валерий</h3>
-      <p>ИИ видеоларын әзірлеуге көмектеседі және монтажға қатысады.</p>
+    <div class="member">
+      <h2>Те Валерий</h2>
+      <p>AI видеоларын өңдейді және монтаждауға көмектеседі. Техникалық шеберлігі жоғары қатысушы.</p>
     </div>
-    <div class="card">
-      <h3>Рауф Радбек</h3>
-      <p>Презентациялар мен мәтіндік мазмұнға жауап береді. Топтың шығармашылық жетекшісі.</p>
+    <div class="member">
+      <h2>Рауф Радбек</h2>
+      <p>Презентацияларды және контентті безендірумен айналысады. Эстетикалық талғамы жоғары.</p>
     </div>
   </section>
 
-  <section class="instagram">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
-    <h2>📸 Бізді Instagram-да қадағалаңыз!</h2>
-    <p>@peak.2502</p>
-    <a href="https://www.instagram.com/peak.2502" target="_blank">Инстаграмға өту</a>
-  </section>
+  <h2>📤 Өз жұмыстарыңызды жүктеңіз</h2>
+  <form id="uploadForm">
+    <input type="text" id="name" placeholder="Атыңыз" required><br>
+    <input type="text" id="title" placeholder="Жұмыс атауы" required><br>
+    <textarea id="desc" placeholder="Қысқаша сипаттама"></textarea><br>
+    <input type="url" id="link" placeholder="Сілтеме (Google Drive, YouTube)" required><br>
+    <button type="submit">Жүктеу</button>
+  </form>
 
-  <section class="upload">
-    <h2>📂 Топ жұмыстары</h2>
-    <form id="uploadForm">
-      <input id="name" placeholder="Атыңыз" required><br>
-      <input id="title" placeholder="Жұмыстың атауы" required><br>
-      <textarea id="desc" placeholder="Қысқаша сипаттама"></textarea><br>
-      <input id="link" placeholder="Жұмыс сілтемесі (YouTube, Drive т.б.)" required><br>
-      <button type="submit">Жүктеу</button>
-    </form>
-    <div id="uploadedWorks"></div>
-  </section>
+  <h2>🗂 Барлық жүктелген жұмыстар</h2>
+  <div id="uploadedWorks"></div>
+
+  <footer>
+    <p>© 2025 PEAK Team | Құрылған Нурмат Камал және команда 🌟</p>
+  </footer>
 
   <script>
-  const API_URL = "https://script.google.com/macros/s/AKfycbyBQ1jftpllpedrTVEJgNsUTTcez5ULUOkSt4xs3gvOvUkXeGAg3WK25W09Qed5skn9/exec";
+    const API_URL = "https://script.google.com/macros/s/AKfycbzhNNaYtlW1EFCbhpS49Zi1rTKwPmuyt_U3lR5k7ALlgy5b3WVgrgiuQCi9X3hGOoQD/exec";
 
-  const form = document.getElementById('uploadForm');
-  const list = document.getElementById('uploadedWorks');
+    const form = document.getElementById('uploadForm');
+    const list = document.getElementById('uploadedWorks');
 
-  async function loadWorks() {
-    list.innerHTML = "<em>Жүктелуде...</em>";
-    const res = await fetch(API_URL);
-    const data = await res.json();
-    list.innerHTML = "";
-    data.reverse().forEach(item => {
-      const div = document.createElement('div');
-      div.classList.add('uploaded-item');
-      div.innerHTML = `
-        <strong>${item.title}</strong> — ${item.name}<br>
-        ${item.desc ? `<em>${item.desc}</em><br>` : ""}
-        ${item.link ? `<a href="${item.link}" target="_blank">🔗 Қарау</a>` : ""}
-      `;
-      list.appendChild(div);
+    async function loadWorks() {
+      list.innerHTML = "<em>Жүктелуде...</em>";
+      const res = await fetch(API_URL);
+      const data = await res.json();
+      list.innerHTML = "";
+      data.reverse().forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('uploaded-item');
+        div.innerHTML = `
+          <strong>${item.title}</strong> — ${item.name}<br>
+          ${item.desc ? `<em>${item.desc}</em><br>` : ""}
+          ${item.link ? `<a href="${item.link}" target="_blank">🔗 Қарау</a>` : ""}
+        `;
+        list.appendChild(div);
+      });
+    }
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const title = document.getElementById('title').value;
+      const link = document.getElementById('link').value;
+      const desc = document.getElementById('desc').value;
+
+      await fetch(API_URL, {
+        method: "POST",
+        body: new URLSearchParams({ name, title, link, desc }),
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+      });
+
+      form.reset();
+      loadWorks();
     });
-  }
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const title = document.getElementById('title').value;
-    const link = document.getElementById('link').value;
-    const desc = document.getElementById('desc').value;
-
-    await fetch(API_URL, {
-      method: "POST",
-      body: new URLSearchParams({ name, title, link, desc }),
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-    });
-
-    form.reset();
     loadWorks();
-  });
-
-  loadWorks();
-</script>
-
+  </script>
 </body>
 </html>
-
